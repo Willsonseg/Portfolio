@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Visual.css">
+    <title>Portfólio Willsonseg</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/ft_perfil.jpg" alt="Foto de Wilson Segundo" class="foto-perfil">
+        <h1>Wilson Segundo</h1>
+        <p class="cabecalho-sub-titulo">Bacharelado em Ciências da Computação (PUCPR) — em andamento, 1º período.</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou estudante do primeiro período de Ciência da Computação, motivado pela
+                curiosidade em entender como a tecnologia funciona por trás dos bastidores. Apesar de estar no início da
+                jornada acadêmica, venho me dedicando a desenvolver uma base sólida em programação, lógica computacional
+                e resolução de problemas.</p>
+            <br></br>
+            <p class="sobre-paragrafo">Além dos estudos, valorizo muito o trabalho em equipe, o aprendizado constante
+                e a ideia de que todo programador, em algum momento, já esteve no começo — e é isso que me motiva a
+                continuar evoluindo.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo"> Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projeto-card">
+                <img src="./img/projeto1.png" alt="Projeto 1" class="projeto-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Orc_Quest</h3>
+                    <p class="paragrafo-projetos">O jogo Orc_Quest foi feito por mim e meus colegas nas primeiras
+                        semanas
+                        de aula na matéria de Experiência criativa!</p>
+                    <br></br>
+                    <a href="https://www.construct.net/en/free-online-games/orcquest-75384/play" target="_blank"
+                        class="menu-link">Clique aqui para visitar nosso jogo!</a>
+                </div>
+            </div>
+            <div class="projeto-card">
+                <img src="./img/Projeto2.png" alt="Projeto 1" class="projeto-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Simulador de Reciclagem</h3>
+                    <p class="paragrafo-projetos">Este app foi o segundo projeto do qual participei na matéria de
+                        Experiência Criativa e tem o objetivo de educar e mostrar às crianças a importância da
+                        reciclagem nos tempos atuais.</p>
+                </div>
+            </div>
+            <div class="projeto-card">
+                <img src="./img/projeto3W.png" alt="Projeto 1" class="projeto-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Importância da Agropecuárea</h3>
+                    <p class="paragrafo-projetos">Nesse último projeto da matéria, decidimos criar um site com a
+                        finalidade de ajudar os pequenos produtores da agricultura familiar.</p>
+                    <br></br>
+                    <a href="https://gabrielscl.github.io/Projeto-3/Pagina%20principal/Pagina_principal.html"
+                        target="_blank" class="menu-link">Clique aqui para visitar nosso site!</a>
+
+                </div>
+            </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulos">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
+            const telefone = '5592985537128'
+
+            const texto = `Olá! Me chamo ${nome},${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            console.log(url);
+
+            window.open(url, '_blank');
+        }
+
+    </script>
+</body>
+
+</html>
