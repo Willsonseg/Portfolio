@@ -10,11 +10,11 @@ html {
 }
 
 :root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0a0f1c;
-    --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
+    --primaria: #581c1c;
+    --secundaria: #a21caf;
+    --escuro: #1e0e0e;
+    --claro: #f3e8ff;
+    --vidro: rgba(255, 255, 255, 0.07);
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(88, 28, 28, 0.85);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
@@ -75,7 +75,7 @@ body {
 .foto-perfil {
     width: 350px;
     height: 350px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 0 20px rgba(162, 28, 175, 0.25);
     border-radius: 50%;
     border: 4px solid var(--vidro);
     animation: flutuar 5s ease-in-out infinite;
@@ -131,7 +131,7 @@ h1 {
 }
 
 .projeto-card:hover {
-    box-shadow: 0 10px 20 px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 20 px rgba(88, 28, 28, 0.3);
     transform: translateY(-10px) scale(1.03);
 
 }
@@ -206,7 +206,7 @@ h1 {
 
 .campo-form:focus {
     border-color: var(--secundaria);
-    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 0 10px rgba(88, 28, 28, 0.5);
 }
 
 .grupo-for {
@@ -227,7 +227,7 @@ h1 {
 
 .botao-form:hover {
     transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 5px 15px rgba(88, 28, 28, 0.5);
 }
 
 .particulas {
